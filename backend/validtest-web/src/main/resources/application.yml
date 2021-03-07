@@ -1,0 +1,28 @@
+## Application Info ##
+info:
+  app:
+    artifactId: project.artifactId
+    encoding: project.build.sourceEncoding
+    java:
+      source: java.version
+      target: java.version
+
+spring:
+
+  application:
+    name: sdicloud-security
+  profiles:
+    active: local
+  main:
+    banner-mode: 'off'
+
+logging:
+  level:
+    org.springframework: ERROR
+
+# App Properties
+sdicloud:
+  app:
+    jwtSecret: validtestSecretKey
+    jwtExpirationMs: 86400000
+

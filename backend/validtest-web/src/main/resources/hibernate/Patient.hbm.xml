@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.validtest.core.patient.domain.Patient" table="patient">
+
+        <composite-id name="id" class="com.validtest.shared.domain.PatientId" access="field">
+            <key-property column="id" name="value" type="string" length="36" access="field"/>
+        </composite-id>
+
+        <component name = "firstName" class = "com.validtest.shared.domain.FirstName" access="field">
+            <property name = "value" column = "first_name" type="string" access="field"/>
+        </component>
+
+        <component name = "lastName" class = "com.validtest.shared.domain.LastName" access="field">
+            <property name = "value" column = "last_name" type="string" access="field" />
+        </component>
+
+        <component name = "status" class = "com.validtest.shared.domain.RecordStatus" access="field">
+            <property name = "value" column = "status" type="string" access="field"/>
+        </component>
+
+    </class>
+</hibernate-mapping>
